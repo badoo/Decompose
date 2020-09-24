@@ -1,6 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+androidExtensions {
+    features = ['parcelize']
 }
 
 android {
@@ -18,6 +23,10 @@ android {
 setupAndroid(project)
 setupCompose(project)
 
+repositories {
+    maven { url 'https://www.jitpack.io' }
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.compose.foundation:foundation:$compose_version"
@@ -26,7 +35,11 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
     implementation "com.google.android.material:material:$android_material_version"
     implementation "com.squareup.sqldelight:android-driver:$sqldelight_version"
+    implementation 'com.github.badoo.ribs:rib-base:0.22.0'
+    implementation 'com.github.badoo.ribs:rib-android:0.22.0'
+    implementation "com.badoo.reaktive:reaktive:$reaktive_version"
     implementation project(':decompose')
     implementation project(":sample:todo:root")
     implementation project(":sample:todo:database")
+    implementation project(":sample:counter:shared")
 }

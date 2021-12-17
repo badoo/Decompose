@@ -10,10 +10,6 @@
 ![badge][badge-tvos]
 ![badge][badge-watchos]
 
-# Maintenance notice
-
-**This repository is not maintained. [Arkadii Ivanov](https://github.com/arkivanov) continued to work on the fork [arkivanov/Decompose](https://github.com/arkivanov/Decompose).**
-
 # Decompose
 
 Please see the [project website](https://arkivanov.github.io/Decompose/) for documentation and APIs. 

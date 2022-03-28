@@ -14,10 +14,7 @@ setupMultiplatform {
         Target.Android,
         Target.Js(mode = Target.Js.Mode.IR),
         Target.Ios(isAppleSiliconEnabled = false),
-
-        // Temporary disabled watchos targets due to https://youtrack.jetbrains.com/issue/KT-48613
-        // Until Kotlin 1.5.31
-//        Target.WatchOs(isAppleSiliconEnabled = false),
+        Target.WatchOs(isAppleSiliconEnabled = false),
     )
 }
 
@@ -27,8 +24,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = deps.versions.jetpackCompose.get()
-        kotlinCompilerVersion = deps.versions.kotlin.get()
+        kotlinCompilerExtensionVersion = deps.versions.jetpackComposeCompiler.get()
     }
 }
 
@@ -86,7 +82,7 @@ configurations {
 }
 
 dependencies {
-    add("composeCompiler", "androidx.compose.compiler:compiler:${deps.versions.jetpackCompose.get()}")
+    add("composeCompiler", "androidx.compose.compiler:compiler:${deps.versions.jetpackComposeCompiler.get()}")
 }
 
 afterEvaluate {

@@ -18,7 +18,41 @@
 
 Please see the [project website](https://arkivanov.github.io/Decompose/) for documentation and APIs. 
 
-Decompose is a Kotlin Multiplatform library for breaking down your code into lifecycle-aware business logic components (aka BLoC), with routing functionality and pluggable UI (Jetpack Compose, Android Views, SwiftUI, JS React, etc.). This project is inspired by [Badoos RIBs](https://github.com/badoo/RIBs) fork of the [Uber RIBs](https://github.com/uber/RIBs) framework.
+Decompose is a Kotlin Multiplatform library for breaking down your code into lifecycle-aware business logic components (aka BLoC), with routing functionality and pluggable UI (Jetpack Compose, Android Views, SwiftUI, JS React, etc.).
+
+## ⚡⚡⚡ Why is this repository a fork?
+
+Having spent 5 years working on a variety of projects for Badoo/Bumble, I’m now off to another adventure. As part of that transition I was asked to transfer this repository to [Badoo GitHub account](https://github.com/badoo).
+
+Now I **continue my work** on this project **as a fork**.
+
+There should be no breaking changes related to this transfer. Most of the external links should not be broken. The repository link is also the same: [arkivanov/Decompose](https://github.com/arkivanov/Decompose). Please file an issue in this repository, if you think something is broken or does not work properly.
+
+Here is what is mostly affected by the transfer:
+
+- All the stars were transferred
+- Search in the code will not work **as long as this repository has less stars than the parent** (your help is needed!)
+- All the Issues and Discussions were transferred as well. I will do all my best to fill the gap here.
+- All pull requests with all the comment history are also gone.
+
+I will continue doing all my best for this project and for the community! Business as usual!
+
+Additional resources:
+
+- [A thread on Hacker News](https://news.ycombinator.com/item?id=29447854)
+
+## Why Decompose?
+
+* Decompose draws clear boundaries between UI and non-UI code, which gives the following benefits:
+  * Better separation of concerns
+  * Pluggable platform-specific UI (Compose, SwiftUI, React, etc.)
+  * Business logic code is testable with pure multiplatform unit tests
+* Proper dependency injection (DI) and inversion of control (IoC) via constructor
+* Shared navigation logic
+* Lifecycle-aware components
+* Components in the back stack are not destroyed, they continue working in background without UI
+* Components and UI state preservation (mostly useful in Android)
+* Instances retaining (aka ViewModels) over configuration changes (mostly useful in Android)
 
 ## Setup
 
@@ -28,7 +62,7 @@ Please check the [Installation](https://arkivanov.github.io/Decompose/getting-st
 
 Here are some key concepts of the library, more details can be found in the documentation.
 
-* [Component](https://arkivanov.github.io/Decompose/component/overview/) - every component represents a piece of logic with its own lifecycle, the UI is optional an is plugged externally
+* [Component](https://arkivanov.github.io/Decompose/component/overview/) - every component represents a piece of logic with its own lifecycle, the UI is optional and is plugged externally
 * [ComponentContext](https://arkivanov.github.io/Decompose/component/overview/#componentcontext) - every component has its own [ComponentContext], which makes components lifecycle-aware and allows state preservation, instances retaining (aka AndroidX `ViewModel`) and back button handling
 * [Router](https://arkivanov.github.io/Decompose/router/overview/) - enables navigation between child components, nested navigation is also supported
 * [Lifecycle](https://arkivanov.github.io/Decompose/component/lifecycle/) - provides a way to listen for lifecycle events in components
@@ -50,7 +84,7 @@ Here are some key concepts of the library, more details can be found in the docu
 
 ## Samples
 
-Check out the [project website](https://arkivanov.github.io/Decompose/getting-started/samples/) for a full description of each sample.
+Check out the [project website](https://arkivanov.github.io/Decompose/samples/) for a full description of each sample.
 
 ## Articles
 

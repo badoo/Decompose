@@ -67,6 +67,7 @@ public abstract interface class com/arkivanov/decompose/router/Router {
 
 public final class com/arkivanov/decompose/router/RouterExtKt {
 	public static final fun bringToFront (Lcom/arkivanov/decompose/router/Router;Ljava/lang/Object;)V
+	public static final fun getActiveChild (Lcom/arkivanov/decompose/router/Router;)Lcom/arkivanov/decompose/Child$Created;
 	public static final fun pop (Lcom/arkivanov/decompose/router/Router;)V
 	public static final fun popWhile (Lcom/arkivanov/decompose/router/Router;Lkotlin/jvm/functions/Function1;)V
 	public static final fun push (Lcom/arkivanov/decompose/router/Router;Ljava/lang/Object;)V
@@ -75,7 +76,9 @@ public final class com/arkivanov/decompose/router/RouterExtKt {
 
 public final class com/arkivanov/decompose/router/RouterFactoryExtKt {
 	public static final fun router (Lcom/arkivanov/decompose/ComponentContext;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/reflect/KClass;Ljava/lang/String;ZLkotlin/jvm/functions/Function2;)Lcom/arkivanov/decompose/router/Router;
+	public static final fun router (Lcom/arkivanov/decompose/ComponentContext;Lkotlin/jvm/functions/Function0;Lkotlin/reflect/KClass;Ljava/lang/String;ZLkotlin/jvm/functions/Function2;)Lcom/arkivanov/decompose/router/Router;
 	public static synthetic fun router$default (Lcom/arkivanov/decompose/ComponentContext;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/reflect/KClass;Ljava/lang/String;ZLkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/arkivanov/decompose/router/Router;
+	public static synthetic fun router$default (Lcom/arkivanov/decompose/ComponentContext;Lkotlin/jvm/functions/Function0;Lkotlin/reflect/KClass;Ljava/lang/String;ZLkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/arkivanov/decompose/router/Router;
 }
 
 public final class com/arkivanov/decompose/router/RouterState {
@@ -91,6 +94,10 @@ public final class com/arkivanov/decompose/router/RouterState {
 	public final fun getBackStack ()Ljava/util/List;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/arkivanov/decompose/router/webhistory/WebHistoryController {
+	public abstract fun attach (Lcom/arkivanov/decompose/router/Router;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V
 }
 
 public abstract class com/arkivanov/decompose/value/MutableValue : com/arkivanov/decompose/value/Value {

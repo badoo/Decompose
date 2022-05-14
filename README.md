@@ -50,7 +50,7 @@ Here are some key concepts of the library, more details can be found in the docu
 
 ## Samples
 
-Check out the [project website](https://arkivanov.github.io/Decompose/getting-started/samples/) for a full description of each sample.
+Check out the [project website](https://arkivanov.github.io/Decompose/samples/) for a full description of each sample.
 
 ## Articles
 
